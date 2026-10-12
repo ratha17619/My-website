@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menut</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            color: azure;
+            margin: 20px auto;
+        }
+        header{
+            background-color: blue;
+            color: black;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        li{
+            position: relative;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            background-color: whitesmoke;
+            top: 100px;
+            left: 0px;
+            min-width: 100px;
+            padding: 10px;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+        li:hover .dropdown{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home
+                    <ul class="dropdown">
+                        <li>Mission</li>
+                        <li>Verssion</li>
+                        <li>Strategy</li>
+                    </ul>
+                </li>
+                <li>About
+                <ul class="dropdown">
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>End</li>
+                </ul>
+                </li>
+                <li>Service</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

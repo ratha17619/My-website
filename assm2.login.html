@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comprehensive Form</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            background: whitesmoke;
+            font-family: Arial, "Kh Muol", sans-serif;
+            color: black(92, 89, 89);
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+        .container {
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 14px 15px 16px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+        h2 {
+            margin: 0 0 12px;
+            text-align: center;
+
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* =========================
+           FIELDSET
+        ========================= */
+        fieldset {
+            margin: 0 0 14px;
+            padding: 8px 10px 10px;
+
+            border: 1px solid black;
+            border-radius: 4px;
+            background: wheat;
+        }
+
+        legend {
+            padding: 0 5px;
+
+            font-size: 9px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* =========================
+           LABEL
+        ========================= */
+        label {
+            display: block;
+            margin-bottom: 4px;
+
+            font-size: 8px;
+            font-weight: bold;
+            color: rgb(17, 14, 14);
+        }
+
+        /* =========================
+           INPUTS
+        ========================= */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px 7px;
+            margin-bottom: 7px;
+            border: 1px solid black;
+            border-radius: 3px;
+            background: whitesmoke;
+            color: black;
+            font-family: Arial, "Khmer ", sans-serif;
+            font-size: 10px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: black;
+            box-shadow: 0 0 3px black(26, 31, 27, 0.2);
+        }
+        /* =========================
+           RADIO + CHECKBOX
+        ========================= */
+        .options {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 7px;
+            flex-wrap: wrap;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            margin: 0;
+            font-size: 8px;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 10px;
+            height: 10px;
+
+            margin: 0;
+            accent-color: green;
+        }
+        /* =========================
+           FILE UPLOAD
+        ========================= */
+        input[type="file"] {
+            width: 100%;
+
+            margin-bottom: 3px;
+
+            font-size: 8px;
+            color: black;
+        }
+        /* =========================
+           TEXTAREA
+        ========================= */
+        textarea {
+            height: 68px;
+            resize: vertical;
+
+            margin-bottom: 0;
+        }
+        /* =========================
+           BUTTONS
+        ========================= */
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 7px;
+
+            margin-top: 8px;
+        }
+
+        button {
+            border: none;
+            border-radius: 3px;
+
+            padding: 6px 15px;
+
+            font-size: 8px;
+            font-weight: bold;
+
+            cursor: pointer;
+            color: whitesmoke;
+        }
+        .submit-btn {
+            background: green;
+        }
+        .submit-btn:hover {
+            background: green;
+        }
+        .reset-btn {
+            background: red;
+        }
+        .reset-btn:hover {
+            background: red;
+        }
+        /* =========================
+           RESPONSIVE
+        ========================= */
+        @media (max-width: 400px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            .options {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+        <h2 style="color: blue;">
+            សំណុំបែបបទ : ទម្រង់ពេញលេញ (Comprehensive Form)
+        </h2>
+
+
+        <!-- =========================
+             BASIC INFORMATION
+        ========================= -->
+        <form>
+
+            <fieldset>
+
+                <legend style="color: orangered">
+                    ព័ត៌មានទូទៅ និងការចូលប្រើ
+                </legend>
+
+                <!-- NAME -->
+                <label for="name">
+                    ឈ្មោះ (Text):
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="សយ​រដ្ឋា"
+                >
+                <!-- EMAIL -->
+                <label for="email">
+                    អ៊ីមែល (Email):
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Rokkiedan@mail.com"
+                >
+
+                <!-- PASSWORD -->
+                <label for="password">
+                    ពាក្យសម្ងាត់ (Password):
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="......"
+                >
+
+                <!-- TELEPHONE -->
+                <label for="telephone">
+                    លេខទូរស័ព្ទ (Tel):
+                </label>
+
+                <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    placeholder="010777129"
+                >
+
+
+                <!-- DATE -->
+                <label for="date">
+                    ថ្ងៃខែឆ្នាំកំណើត (Date):
+                </label>
+                <input
+                    type="date"
+                    id="date"
+                    name="Date"
+                    placeholder="190928"
+                >
+                <!-- NUMBER -->
+                <label for="number">
+                    អាយុ (Number):
+                </label>
+                <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    placeholder="18ឆ្នាំ"
+                >
+            </fieldset>
+            <!-- =========================
+                 OPTIONS
+            ========================= -->
+            <fieldset>
+                <legend>
+                    ជម្រើស និងការជ្រើសរើស (Options & Choices)
+                </legend>
+                <!-- RADIO -->
+                <label>
+                    ភេទ (Radio Button):
+                </label>
+                <div class="options">
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                        >
+                        ប្រុស
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female checked"
+                        >
+                        ស្រី
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                        >
+                        ផ្សេងៗ
+                    </label>
+
+                </div>
+                <!-- CHECKBOX -->
+                <label>
+                    ជំនាញដែលចូលចិត្ត (Checkbox):
+                </label>
+                <div class="options">
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skill"
+                            value="html"
+                        >
+                        HTML
+                    </label>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skill"
+                            value="css"
+                        >
+                        CSS
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skill"
+                            value="javascript"
+                        >
+                        JavaScript
+                    </label>
+
+                </div>
+
+
+                <!-- SELECT -->
+                <label for="major">
+                    ជ្រើសរើស (Select/Dropdown):
+                </label>
+
+                <select id="major" name="major">
+
+                    <option value="">
+                        -- ជ្រើសរើសជំនាញ --
+                    </option>
+
+                    <option value="it">
+                        Information Technology
+                    </option>
+
+                    <option value="computer-science">
+                        Computer Science
+                    </option>
+
+                    <option value="business">
+                        Business
+                    </option>
+
+                </select>
+
+
+                <!-- FILE -->
+                <label for="file">
+                    ឯកសាររូបភាព (File Upload):
+                </label>
+
+                <input
+                    type="file"
+                    id="file"
+                    name="file"
+                >
+
+            </fieldset>
+
+
+            <!-- =========================
+                 ADVANCED INPUTS
+            ========================= -->
+            <fieldset>
+
+                <legend>
+                    កម្រិតខ្ពស់ (Advanced & Special Inputs)
+                </legend>
+
+
+                <!-- TEXTAREA -->
+                <label for="message">
+                    មតិយោបល់/ព័ត៌មានបន្ថែម (Textarea):
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="បញ្ចូលមតិយោបល់ ឬព័ត៌មានបន្ថែមរបស់អ្នក..."
+                ></textarea>
+
+            </fieldset>
+
+
+            <!-- =========================
+                 BUTTONS
+            ========================= -->
+            <div class="buttons">
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit
+                </button>
+
+                <button
+                    type="reset"
+                    class="reset-btn"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
