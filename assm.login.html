@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+        }
+
+        /* Main title */
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: rgb(53, 52, 52);
+            font-size: 20px;
+        }
+
+        /* Form box */
+        .form-box {
+            width: 95%;
+            max-width: 550px;
+            margin: auto;
+            background-color: whitesmoke;
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        /* Fieldset title */
+        legend {
+            color: blue;
+            font-weight: bold;
+            padding: 0 8px;
+            font-size: 15px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: rgb(27, 27, 27);
+        }
+        /* Text input */
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid blue;
+            border-radius: 3px;
+            font-size: 13px;
+            background-color: white;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: blue;
+        }
+        /* Radio and checkbox */
+        .option {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+            font-size: 13px;
+        }
+        .option input {
+            margin-right: 4px;
+        }
+        /* Address */
+        textarea {
+            height: 70px;
+            resize: vertical;
+        }
+
+        /* Buttons */
+        .buttons {
+            text-align: right;
+            margin-top: 10px;
+        }
+        button {
+            border: none;
+            padding: 7px 15px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .reset {
+            background-color: red;
+        }
+        .submit {
+            background-color: green;
+            margin-left: 5px;
+        }
+        .reset:hover {
+            background-color: red;
+        }
+        .submit:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: brown;">ទម្រង់ចុះឈ្មោះនិស្សិត (Student Form)</h2>
+
+    <form class="form-box">
+
+        <fieldset>
+            <legend>ព័ត៌មានទូទៅ</legend>
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname">
+                    ឈ្មោះពេញ (Full Name):
+                </label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="សយ​រដ្ឋា"
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">
+                    ពាក្យសម្ងាត់ (Password): 
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="...."
+                >
+            </div>
+            <!-- Gender -->
+            <div class="form-group">
+                <label>ភេទ (Gender):</label>
+
+                <label class="option">
+                    <input type="radio" name="gender" value="female" checked>
+                    ស្រី
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="gender" value="male">
+                    ប្រុស
+                </label>
+            </div>
+
+            <!-- Major -->
+            <div class="form-group">
+                <label for="major">
+                    ជំនាញសិក្សា (Major):
+                </label>
+
+                <select id="major" name="major">
+                    <option value="it">បច្ចេកវិទ្យាព័ត៌មាន (IT)</option>
+                    <option value="business">គ្រប់គ្រងពាណិជ្ជកម្ម</option>
+                    <option value="law">នីតិសាស្ត្រ</option>
+                    <option value="tourism">ទេសចរណ៍</option>
+                </select>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="form-group">
+                <label>ចំណង់ចំណូលចិត្ត (Hobbies):</label>
+
+                <label class="option">
+                    <input type="checkbox" name="hobby" value="football" checked>
+                    លេងបាល់ទាត់
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="hobby" value="music">
+                    ស្តាប់តន្ត្រី
+                </label>
+
+                <label class="option">
+                    <input type="checkbox" name="hobby" value="reading">
+                    អានសៀវភៅ
+                </label>
+            </div>
+
+            <!-- Profile Photo -->
+            <div class="form-group">
+                <label for="photo">
+                    រូបថតប្រវត្តិរូប (Profile Photo):
+                </label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                >
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">
+                    អាសយដ្ឋាន (Address):
+                </label>
+                <textarea
+                    id="address"
+                    name="address"
+                    placeholder="សរសេរអាសយដ្ឋាន..."
+                ></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="reset" class="reset">
+                    Reset
+                </button>
+
+                <button type="submit" class="submit">
+                    Submit
+                </button>
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+</html>
